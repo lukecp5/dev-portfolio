@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+*Created by Luke Poirrier using stylesheets and basic JQuery from the bootstrap 4.4.1 repository. This was my first time building with the code extracted from the bootstrap source, and I found it much easier to work with when I could see the actual code that I had to work with. 
+
+* For the record, the various symbols that you may see at the beginning of comments, are for my own personal use. Symbols like !,?,~,/,\,+,-,_ are used by a customized VSCode plugin to change the color of the comments their used on to make them stand out to me while developing this page. You can find a link to the extension here: VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments -->
+<head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <title>Luke Poirrier - Web Developer</title>
+      <!-- Font Awesome icons (free version)-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+            crossorigin="anonymous"></script>
+      <!-- This is a link to a stylesheet with style rules extracted from bootstrap to improve loading times and minimize the amount of memory taked up at load time -->
+      <link href="./css/styles.css" rel="stylesheet" />
+      <!-- This is where I extracted out the fontface selections for the heading and the body of the portfolio page-->
+      <link rel="stylesheet" href="./css/heading.css" />
+      <link rel="stylesheet" href="./css/body.css" />
+</head>
+
+<body id="page-top">
+      <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+            <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="#page-top">LUKE POIRRIER</a>
+                  <!-- Support for when the navbar is collapsed on mobile/ hamburger menu. This will not be displayed on larger screen devices -->
+                  <button class="
+              navbar-toggler navbar-toggler-right
+              font-weight-bold
+              bg-primary
+              text-white
+              rounded
+            " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- Hamburder Icon from font awesome -->
+                        Menu <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                              <!-- Links to the various sections of the page -->
+                              <li class="nav-item mx-0 mx-lg-1">
+                                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                          href="#portfolio">PORTFOLIO</a>
+                              </li>
+                              <li class="nav-item mx-0 mx-lg-1">
+                                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                          href="#about">ABOUT</a>
+                              </li>
+                              <li class="nav-item mx-0 mx-lg-1">
+                                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                          href="#contact">CONTACT</a>
+                              </li>
+                        </ul>
+                  </div>
+            </div>
+      </nav>
+      <header class="masthead bg-primary text-secondary text-center">
+            <div class="container d-flex align-items-center flex-column">
+                  <!-- The most recent picture I have, I plan to get a more professional headshot done near the end of the bootcamp --><img
+                        class="masthead-avatar mb-5 rounded-circle" src="./assets/img/profilepic.png" alt="" />
+                  <!-- Masthead Heading-->
+                  <h1 class="masthead-heading mb-0">Luke Poirrier</h1>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom divider-light">
+                        <div class="divider-custom-line text-secondary"></div>
+                        <div class="divider-custom-icon"><i class="text-secondary fas fa-hashtag"></i></div>
+                        <div class="divider-custom-line text-secondary"></div>
+                  </div>
+                  <!-- Masthead Subheading-->
+                  <p class="pre-wrap masthead-subheading font-weight-bolder mb-0 mt-0 display-4">Web Developer
+                  </p>
+            </div>
+      </header>
+
+      <!-- ? \/\/\/\/\/\/\/\/\/\/ Start of portfolio section \/\/\/\/\/\/\/\/\/\/ -->
+      <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                  <!-- Portfolio Section Heading-->
+                  <div class="text-center">
+                        <h2 class="page-section-heading text-secondary mb-0 d-inline-block">
+                              Portfolio
+                        </h2>
+                  </div>
+                  <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon"><i class="fas fa-hashtag"></i></div>
+                        <div class="divider-custom-line"></div>
+                  </div>
+                  <div class="row justify-content-center">
+                  <!-- * Beginning of the project buttons - the buttons that open the modal for each project * -->
+                  <!-- This is the template I used for all of the portfolio Items, simply changes the image source and the Alt tags.  -->
+                  <!-- ! Portfolio Card #1 -->
+                  <div class="col-md-6 col-lg-4 mb-5">
+                        <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                              <!-- Added a plus sign to signify to the user that there is more content about the project when this button/project is clicked  -->
+                            <div class="portfolio-item-caption-content text-center text-white">
+                              <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                          </div>
+                          <!-- This is the preview image of the application. For now it's a screenshot, but I later plan to have one central theme for all of my applications so that they all mesh well in my portfolio-->
+                          <img class="img-fluid" src="./assets/img/portfolio/scheduler.png" alt="Work Day Planner" />
+                        </div>
+                      </div>
+                  <!-- ! Portfolio Card #2 -->
+                  <div class="col-md-6 col-lg-4 mb-5">
+                        <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                         <!-- Added a plus sign to signify to the user that there is more content about the project when this button/project is clicked  -->
+                            <div class="portfolio-item-caption-content text-center text-white">
+                              <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                          </div>
+                        <!-- This is the preview image of the application. For now it's a screenshot, but I later plan to have one central theme for all of my applications so that they all mesh well in my portfolio-->
+                          <img class="img-fluid" src="./assets/img/portfolio/marvel-library.png" alt="Marvel Library" />
+                        </div>
+                      </div>
+                  <!-- ! Portfolio Card #3 -->
+                  <div class="col-md-6 col-lg-4 mb-5">
+                        <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                              <!-- Added a plus sign to signify to the user that there is more content about the project when this button/project is clicked  -->
+                        <div class="portfolio-item-caption-content text-center text-white">
+                              <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                        </div>
+                        <!-- This is the preview image of the application. For now it's a screenshot, but I later plan to have one central theme for all of my applications so that they all mesh well in my portfolio-->
+                        <img class="img-fluid" src="./assets/img/portfolio/password-generator.png" alt="Password Generator" />
+                        </div>
+                  </div>
+                  <!-- ! Portfolio Card #4 -->
+                  <div class="col-md-6 col-lg-4 mb-5">
+                        <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                              <!-- Added a plus sign to signify to the user that there is more content about the project when this button/project is clicked  -->
+                        <div class="portfolio-item-caption-content text-center text-white">
+                              <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                        </div>
+                        <!-- This is the preview image of the application. For now it's a screenshot, but I later plan to have one central theme for all of my applications so that they all mesh well in my portfolio-->
+                        <img class="img-fluid" src="./assets/img/portfolio/coding-quiz.png" alt="Coding Quiz" />
+                        </div>
+                  </div>
+                  <!-- ! Portfolio Card #5 -->
+                  <div class="col-md-6 col-lg-4 mb-5">
+                        <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                              <!-- Added a plus sign to signify to the user that there is more content about the project when this button/project is clicked  -->
+                        <div class="portfolio-item-caption-content text-center text-white">
+                              <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                        </div>
+                        <!-- This is the preview image of the application. For now it's a screenshot, but I later plan to have one central theme for all of my applications so that they all mesh well in my portfolio-->
+                        <img class="img-fluid" src="./assets/img/portfolio/weather-dashboard.png" alt="Weather Dashboard" />
+                        </div>
+                  </div>
+</div>
+                  </div>
+                  </div>
+            </section>
+                  <!-- * End of the project buttons - the buttons that open the modal for each project * -->
+
+
+  <!-- * Portfolio Modals that will displayed when the project buttons are clicked. It is a dialog box that displays the project title, an image of the project, a brief description of the project, and links to each projects Live demo, and Github Repository. -->
+  <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog"
+    aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fas fa-times"></i></span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                        <!-- Portfolio Modal - Title-->
+                        <h2 class="portfolio-modal-title text-secondary mb-0">
+                          Work Day Planner
+                        </h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom">
+                          <div class="divider-custom-line"></div>
+                          <div class="divider-custom-icon">
+                            <i class="fas fa-hashtag"></i>
+                          </div>
+                          <div class="divider-custom-line"></div>
+                        </div>
+                        <!--- Project picture - Currently the screenshot that is on it's readme on the github repo, will update in the future -->
+                        <img class="img-fluid rounded mb-5" src="./assets/img/portfolio/scheduler.png" alt="Work Day Planner" />
+                        <!--+Description of project-->
+                        <p class="mb-5">
+                              This app is designed to be a way for busy people to plan out
+                              their day. It features the current date at the top of the
+                              page, and a timeblock for each hour of a normal business
+                              day. By clicking a timeblock, you can enter your event/task
+                              for that time of day. By clicking the save button next to
+                              the respective timeblock, you can save your entry to your
+                              local storage for later use. It will be available to you
+                              when you return to the page - even after navigating away
+                              from the application.
+                            </p>
+                            <a href="https://lukecp5.github.io/work-day-planner/" class=" btn btn-secondary mb-2 ">Live Demo</a>
+                            <a href="https://github.com/lukecp5/work-day-planner" class=" btn btn-secondary mb-2 ">GitHub Repo</a>
+                            <br>
+                            <button class="btn btn-primary" href="#" data-dismiss="modal">
+                              <i class="fas fa-times fa-fw"></i>Close Window
+                            </button>
+                      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
+    aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fas fa-times"></i></span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2 class="portfolio-modal-title text-secondary mb-0">
+                  Marvel Library </h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-hashtag"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5"
+                  src="./assets/img/portfolio/marvel-library.png" alt="Marvel Library" />
+                <!-- Portfolio Modal - Text-->
+                <p class="mb-5">
+                  Marvel Library is an intuitive front-end for the Marvel Comic Universe API(Application Programming
+                  Interface) The user selects a character from a stylish drop down menu, and they are presented with
+                  statistics about the characters official name, the number of comics they’re included in, the number of
+                  stories they’re included in, a link to their official Marvel Wiki page, and a link that takes them to
+                  their character page in our application.
+                </p>
+                <a href="https://lukecp5.github.io/marvel-library/" class=" btn btn-secondary mb-2 ">Live Demo</a>
+                <a href="https://github.com/lukecp5/marvel-library" class=" btn btn-secondary mb-2 ">GitHub Repo</a>
+                <br>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog"
+  aria-labelledby="#portfolioModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Portfolio Modal - Title-->
+              <h2 class="portfolio-modal-title text-secondary mb-0">
+                Password Generator
+              </h2>
+              <!-- Icon Divider-->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-hashtag"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5"
+                src="./assets/img/portfolio/password-generator.png" alt="Circus Tent" />
+              <!-- Portfolio Modal - Text-->
+              <p class="mb-5">
+                This is a password generator that takes in several parameters from the user, then generates a password
+                based on those parameters. It uses JavaScript confirm boxes to allow the user to choose what kinds of
+                characters they would like in their password. In the future this password generator will use form
+                controls on the page to control what gets put into the passsword.
+              </p>
+              <a href="https://lukecp5.github.io/password-generator/" class=" btn btn-secondary mb-2 ">Live Demo</a>
+              <a href="https://github.com/lukecp5/password-generator" class=" btn btn-secondary mb-2 ">GitHub Repo</a>
+              <br>
+              <button class="btn btn-primary" href="#" data-dismiss="modal">
+                <i class="fas fa-times fa-fw"></i>Close Window
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog"
+aria-labelledby="#portfolioModal3Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+  <div class="modal-content">
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true"><i class="fas fa-times"></i></span>
+    </button>
+    <div class="modal-body text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Portfolio Modal - Title-->
+            <h2 class="portfolio-modal-title text-secondary mb-0">
+              Coding Quiz
+            </h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon">
+                <i class="fas fa-hashtag"></i>
+              </div>
+              <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5"
+              src="./assets/img/portfolio/coding-quiz.png" alt="Controller" />
+            <!-- Portfolio Modal - Text-->
+            <p class="mb-5">
+              This is a quiz developed to help you test your coding skills. It is a timed quiz. For every answer you
+              get incorrect, you lose 5 seconds of time. Your ending score is the amount of time you have remaining
+              at the end of the quiz. The coding quiz gives you the ability to save your highscore, so that you can
+              track your progress as you learn more about development. The highscores are stored in local storage,
+              so even if you leave and come back your past scores are still displayed.
+            </p>
+            <a href="https://lukecp5.github.io/coding-quiz/" class=" btn btn-secondary mb-2 ">Live Demo</a>
+            <a href="https://github.com/lukecp5/coding-quiz" class=" btn btn-secondary mb-2 ">GitHub Repo</a>
+            <br>
+            <button class="btn btn-primary" href="#" data-dismiss="modal">
+              <i class="fas fa-times fa-fw"></i>Close Window
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog"
+aria-labelledby="#portfolioModal4Label" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+  <div class="modal-content">
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true"><i class="fas fa-times"></i></span>
+    </button>
+    <div class="modal-body text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Portfolio Modal - Title-->
+            <h2 class="portfolio-modal-title text-secondary mb-0">
+              Weather Dashboard
+            </h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon">
+                <i class="fas fa-hashtag"></i>
+              </div>
+              <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5"
+              src="./assets/img/portfolio/weather-dashboard.png" alt="Weather Dashboard" />
+            <!-- Portfolio Modal - Text-->
+            <p class="mb-5">
+              This weather dashboard is an easy way to see the current and future weather for any city around the
+              globe. You simply type in what city you'd like to see the weather for, click 'Search', and the
+              application will display the weather for the week. It has a feature that saves your previous searches
+              so that you can just click on them to have the weather for the specified city shown again
+            </p>
+            <a href="https://lukecp5.github.io/weather-dashboard/" class=" btn btn-secondary mb-2 ">Live Demo</a>
+            <a href="https://github.com/lukecp5/weather-dashboard/" class=" btn btn-secondary mb-2 ">GitHub Repo</a>
+            <br>
+            <button class="btn btn-primary" href="#" data-dismiss="modal">
+              <i class="fas fa-times fa-fw"></i>Close Window
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ! \/\/\/\/   Start of About section  \/\/\/\/ -->
+<section class="page-section bg-primary text-white mb-0" id="about">
+      <div class="container">
+            <!-- About Section Heading-->
+            <div class="text-center">
+              <h2 class="page-section-heading d-inline-block text-secondary">About</h2>
+            </div>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="fas fa-hashtag"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+                  <div class="col-lg-4 ml-auto">
+                    <p class="pre-wrap lead text-dark font-weight-normal">My name is Luke Poirrier, and I currently reside in North Georgia. I have over 10 years of experience in various types of coding. Since I was in grade school, I've been infatuated with writing code and creating web sites. I am currently enrolled at a coding boot camp at the Georgia Institute of Technology(GA Tech) to solidify my foundational knowledge of development.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 mr-auto">
+                    <p class="pre-wrap lead text-dark font-weight-normal">I have experience in front-end web development, working with technologies like AJAX, Bootstrap, CSS, HTML, JavaScript, JSON, Materialize.css, Node.JS, and various other modern development media. I am currently searching for a role as a Front-end Developer or Jr. Software Engineer. I'm looking to be part of a team that is innovative and challenging. Let's build something wonderful.
+                    </p>
+                  </div>
+                </div>
+
+            </div>
+      </section>
+      <section class="page-section" id="contact">
+            <div class="container">
+              <!-- Contact Section Heading-->
+              <div class="text-center">
+                <h2 class="page-section-heading text-secondary d-inline-block mb-0">
+                  Contact
+                </h2>
+              </div>
+              <!-- Icon Divider-->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-hashtag"></i></div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <!-- Contact Section Content-->
+              <div class="row justify-content-center">
+                <div class="col-lg-4">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="icon-contact mb-3">
+                      <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="font-weight-normal">Phone</div>
+                    <div class="lead font-weight-bold text-dark">4702775368</div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="d-flex flex-column align-items-center">
+                    <div class="icon-contact mb-3">
+                      <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="font-weight-normal">Email</div>
+                    <a class="lead font-weight-bold text-dark" href="mailto:Luke@LukePoirrier.com">Luke@LukePoirrier.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Start of footer section with links to each of my developer social media profiles -->
+          <footer class="footer text-center text-light bg-primary">
+            <div class="container">
+              <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                  <h4 class="mb-4 font-weight-bolder">LOCATION</h4>
+                  <p class="pre-wrap lead mb-0 font-weight-normal">50 North Street <br>Canton, GA 30114</p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0 text-light ">
+                  <h4 class="mb-4">AROUND THE WEB</h4>
+                  <a class=" btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/luke-poirrier"><i
+                      class="fab fa-fw fa-linkedin-in"></i></a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/lukecp5"><i
+                      class="fab fa-fw fa-github"></i></a>
+                  <a class="btn btn-outline-light btn-social mx-1"
+                    href="https://stackoverflow.com/users/16159639/luke-poirrier"><i
+                      class=" fab fa-fw fa-stack-overflow"></i></a>
+                  <a class="btn btn-outline-light mx-1" href="./assets/luke-poirrier-dev-resume.pdf">Download Resume</a>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                  <h4 class="mb-4">ABOUT LUKE</h4>
+                  <p class="pre-wrap lead mb-0"> I'm a front-end web developer with over 10 years of experience building websites and apps </p>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- Copyright section and scroll to top button -->
+          <section class="copyright py-4 text-center text-white">
+            <div class="container">
+              <small class="pre-wrap">Copyright © Luke Poirrier 2021</small>
+            </div>
+          </section>
+          <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+          <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
+                class="fa fa-chevron-up"></i></a>
+          </div>
+          <!-- Bootstrap core JS-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+          <!-- Third party plugin JS-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+          <!-- Contact form JS-->
+          <!-- <script src="./assets/mail/jqBootstrapValidation.js"></script>
+          <script src="./assets/mail/contact_me.js"></script> -->
+          <!-- Core custom JS for smoothscroll, hamburger mobile nav, etc. -->
+          <script src="js/scripts.js"></script>
+</body>
+</html>
