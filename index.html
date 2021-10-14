@@ -90,7 +90,21 @@
                   <div class="row justify-content-center">
                   <!-- * Beginning of the project buttons - the buttons that open the modal for each project * -->
                   <!-- This is the template I used for all of the portfolio Items, simply changes the image source and the Alt tags.  -->
-                  <!-- ! Portfolio Card #1 -->
+                  <!-- ! Portfolio card #1 -->
+                  <div class="col-md-6 col-lg-4 mb-5">
+                    <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                      <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                          <!-- Added a plus sign to signify to the user that there is more content about the project when this button/project is clicked  -->
+                        <div class="portfolio-item-caption-content text-center text-white">
+                          <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                      </div>
+                      <!-- This is the preview image of the application. For now it's a screenshot, but I later plan to have one central theme for all of my applications so that they all mesh well in my portfolio-->
+                      <img class="img-fluid" src="./assets/img/portfolio/cachetag-ss.png" alt="Cache Tag" />
+                    </div>
+                  </div>
+                  <!-- ! Portfolio Card #2 -->
                   <div class="col-md-6 col-lg-4 mb-5">
                         <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
@@ -104,7 +118,7 @@
                           <img class="img-fluid" src="./assets/img/portfolio/scheduler.png" alt="Work Day Planner" />
                         </div>
                       </div>
-                  <!-- ! Portfolio Card #2 -->
+                  <!-- ! Portfolio Card #3 -->
                   <div class="col-md-6 col-lg-4 mb-5">
                         <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
@@ -118,7 +132,7 @@
                           <img class="img-fluid" src="./assets/img/portfolio/marvel-library.png" alt="Marvel Library" />
                         </div>
                       </div>
-                  <!-- ! Portfolio Card #3 -->
+                  <!-- ! Portfolio Card #4 -->
                   <div class="col-md-6 col-lg-4 mb-5">
                         <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
@@ -132,7 +146,7 @@
                         <img class="img-fluid" src="./assets/img/portfolio/password-generator.png" alt="Password Generator" />
                         </div>
                   </div>
-                  <!-- ! Portfolio Card #4 -->
+                  <!-- ! Portfolio Card #5 -->
                   <div class="col-md-6 col-lg-4 mb-5">
                         <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
@@ -146,7 +160,7 @@
                         <img class="img-fluid" src="./assets/img/portfolio/coding-quiz.png" alt="Coding Quiz" />
                         </div>
                   </div>
-                  <!-- ! Portfolio Card #5 -->
+                  <!-- ! Portfolio Card #6 -->
                   <div class="col-md-6 col-lg-4 mb-5">
                         <!-- The data-toggle tells the page what to toggle when clicked, and the data-target which modal to display from further down the page -->
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
@@ -168,6 +182,58 @@
 
 
   <!-- * Portfolio Modals that will displayed when the project buttons are clicked. It is a dialog box that displays the project title, an image of the project, a brief description of the project, and links to each projects Live demo, and Github Repository. -->
+  <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog"
+  aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+                <div class="col-lg-8">
+                      <!-- Portfolio Modal - Title-->
+                      <h2 class="portfolio-modal-title text-secondary mb-0">
+                        Work Day Planner
+                      </h2>
+                      <!-- Icon Divider-->
+                      <div class="divider-custom">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                          <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
+                      </div>
+                      <!--- Project picture - Currently the screenshot that is on it's readme on the github repo, will update in the future -->
+                      <img class="img-fluid rounded mb-5" src="./assets/img/portfolio/scheduler.png" alt="Work Day Planner" />
+                      <!--+Description of project-->
+                      <p class="mb-5">
+                            This app is designed to be a way for busy people to plan out
+                            their day. It features the current date at the top of the
+                            page, and a timeblock for each hour of a normal business
+                            day. By clicking a timeblock, you can enter your event/task
+                            for that time of day. By clicking the save button next to
+                            the respective timeblock, you can save your entry to your
+                            local storage for later use. It will be available to you
+                            when you return to the page - even after navigating away
+                            from the application.
+                          </p>
+                          <a href="https://lukecp5.github.io/work-day-planner/" class=" btn btn-secondary mb-2 ">Live Demo</a>
+                          <a href="https://github.com/lukecp5/work-day-planner" class=" btn btn-secondary mb-2 ">GitHub Repo</a>
+                          <br>
+                          <button class="btn btn-primary" href="#" data-dismiss="modal">
+                            <i class="fas fa-times fa-fw"></i>Close Window
+                          </button>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- + Work Day Planner Modal Content -->
   <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog"
     aria-labelledby="#portfolioModal0Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
@@ -218,6 +284,9 @@
       </div>
     </div>
   </div>
+
+<!-- + Marvel Library Modal Content -->
+
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog"
     aria-labelledby="#portfolioModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
@@ -263,6 +332,8 @@
       </div>
     </div>
   </div>
+
+<!-- + Password Generator Modal Content -->
   <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog"
   aria-labelledby="#portfolioModal2Label" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
@@ -308,6 +379,8 @@
     </div>
   </div>
 </div>
+
+<!-- + Coding Quiz Modal Content -->
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog"
 aria-labelledby="#portfolioModal3Label" aria-hidden="true">
 <div class="modal-dialog modal-xl" role="document">
@@ -354,6 +427,8 @@ aria-labelledby="#portfolioModal3Label" aria-hidden="true">
   </div>
 </div>
 </div>
+
+<!-- + Weather Dashboard Modal Content -->
 <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog"
 aria-labelledby="#portfolioModal4Label" aria-hidden="true">
 <div class="modal-dialog modal-xl" role="document">
@@ -399,6 +474,7 @@ aria-labelledby="#portfolioModal4Label" aria-hidden="true">
   </div>
 </div>
 </div>
+
 <!-- ! \/\/\/\/   Start of About section  \/\/\/\/ -->
 <section class="page-section bg-primary text-white mb-0" id="about">
       <div class="container">
